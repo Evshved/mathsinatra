@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>System for solving mathematical equations</title>
+    <meta charset="UTF-8"
+    <link href ="style.css" rel="stylesheet" media="all">
+    <!-- не работает вставка -->
+    <style>
+    body {
+     font-family: Arial, sans-serif; /* Рубленый шрифт */
+    }
+    .letter {
+     color: red; /* Красный цвет символов */
+     font-size: 100%; /* Размер шрифта в процентах */
+     font-family: serif; /* Шрифт с засечками */
+     position: relative; /* Относительное позиционирование */
+     top: 10px; /* Сдвиг сверху */
+    }
+  </style>
+  </head>
+<body>
+Hi, it's system for solving mathematical equations<br>
+She can solve 2 type of equations.
+  <p><b>Type of mathematical equation</b><br>
+   <input type="radio" name="linear" onclick="displayDate()" value="0"> linear<br>
+   <input type="radio" name="quadratic" onclick="displayDate()" value="1"> quadratic <br>
+  </p>
+
+
+    <form action="quadratic" method="post">
+      <div id="form-container-for-linear">
+        <span class="letter">k∙x + b = c</span> <br> <br>
+
+        <input maxlength="25" size="10" value="1">x+
+
+
+        <input maxlength="25" size="10" value="2">
+        =
+        <input maxlength="25" size="10" value="3">
+        <input type="submit" value="Submit">
+      </div>
+    </form>
+
+    <form action="quadratic" method="post">
+      <div id="form-container-for-quadratic">
+        <span class="letter">ax<sup>2</sup> + bx + c = y </span> <br> <br>
+        x2
+        <input maxlength="25" size="10" value="1" required>
+        +x
+        <input maxlength="25" size="10" value="2">
+        +c
+        <input maxlength="25" size="10" value="3">
+        =
+        <input maxlength="25" size="10" value="4">
+        <input type="submit" value="Submit">
+      </div>
+    </form>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
+
+
+
