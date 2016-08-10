@@ -1,19 +1,10 @@
 body {
-  background-color: #fafafa;
-  font-family: proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
-}
-
-.form-container-for-linear {
-  display: none;
-}
-
-.form-container-for-quadratic {
-  display: none;
+  font-family: Arial, sans-serif; /* Рубленый шрифт */
 }
 .letter {
   color: red; /* Красный цвет символов */
-  font-size: 200%; /* Размер шрифта в процентах */
+  font-size: 100%; /* Размер шрифта в процентах */
   font-family: serif; /* Шрифт с засечками */
   position: relative; /* Относительное позиционирование */
-  top: 5px; /* Сдвиг сверху */
+  top: 10px; /* Сдвиг сверху */
 }
