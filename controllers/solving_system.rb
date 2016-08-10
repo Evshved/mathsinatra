@@ -9,5 +9,9 @@ require './solve_quadratic'
 # Test linear
 equation = MainEquations.new
 equation.linear(1,2,3)
-
+#Test quadratic D > 0
 equation.quadratic(1,1,1,1)
+# D = 0
+equation.quadratic(100,1,2,0)
+# D < 0
+equation.quadratic(1,2,1,0)
