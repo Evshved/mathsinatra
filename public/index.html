@@ -6,56 +6,46 @@
     <script type="text/javascript" src="/assets/javascripts/jquery-3.1.0.min.js"></script>
     <meta charset="UTF-8"
   </head>
-<body>
-Hi, it's system for solving mathematical equations<br>
-She can solve 2 type of equations.
-  <p><b>Type of mathematical equation</b>
-<!--    <input type="radio" name="linear" onclick="displayDate()"> linear
-   <input type="radio" name="quadratic" onclick="displayDate()"> quadratic -->
-  </p>
+  <body>
+  Hi, it's system for solving mathematical equations<br>
+  She can solve 2 type of equations.
+    <p><b>Type of mathematical equation</b>
+    </p>
 
-<form>
+    <form>
+      <input type="radio" name="switch" value="1" id = "linear"> Linear
+      <input type="radio" name="switch" value="0" id = "quadratic"> Quadratic
 
+      <div id="div_change_linear">
+          <span class="letter">k∙x + b = y</span> <br> <br>
 
-    <input type="radio" name="switch" value="1" id = "linear"> Linear
-    <input type="radio" name="switch" value="0" id = "quadratic"> Quadratic
-
-
-
-    <div id="div_change_linear">
-        <span class="letter">k∙x + b = y</span> <br> <br>
-
-        <input maxlength="25" size="10" value="6" id = "first_coeflin">x+
+          <input maxlength="25" size="10" value="6" id = "first_coeflin">x+
 
 
-        <input maxlength="25" size="10" value="2" id = "second_coeflin">
-        =
-        <input maxlength="25" size="10" value="3" id = "third_coeflin">
-        <input type="submit" value="Answer">
-    </div>
+          <input maxlength="25" size="10" value="2" id = "second_coeflin">
+          =
+          <input maxlength="25" size="10" value="3" id = "third_coeflin">
+          <input type="submit" value="Answer">
+      </div>
 
-    <div id="div_change_quadratic">
-        <span class="letter">ax<sup>2</sup> + bx + c = y </span> <br> <br>
+      <div id="div_change_quadratic">
+          <span class="letter">ax<sup>2</sup> + bx + c = y </span> <br> <br>
 
-        <input maxlength="25" size="10" value="1" id = "first_coefqua">
-        x<sup>2</sup>+
-        <input maxlength="25" size="10" value="2" id = "second_coefqua">
-        x+
-        <input maxlength="25" size="10" value="3" id = "third_coefqua">
-        =
-        <input maxlength="25" size="10" value="4" id = "fourth_coefqua">
-        <input type="submit" value="Answer">
-    </div>
+          <input maxlength="25" size="10" value="1" id = "first_coefqua">
+          x<sup>2</sup>+
+          <input maxlength="25" size="10" value="2" id = "second_coefqua">
+          x+
+          <input maxlength="25" size="10" value="3" id = "third_coefqua">
+          =
+          <input maxlength="25" size="10" value="4" id = "fourth_coefqua">
+          <input type="submit" value="Answer">
+      </div>
 
-    <input type="hidden" value="ch1">
+      <input type="hidden" value="ch1">
+    </form>
 
-
-</form>
-
-
-<script src="/assets/javascripts/script.js"></script>
-</body>
-
+    <script src="/assets/javascripts/script.js"></script>
+  </body>
 </html>
 
 
