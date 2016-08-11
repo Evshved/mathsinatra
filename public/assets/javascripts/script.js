@@ -57,18 +57,6 @@ $( "#myforma" ).validate({
   }
 })
 
-$("#myforma").submit(function() {
-    alert("1")
-    $.ajax({
-      url: "http://localhost:4567/index.html/",
-      dataType: 'json',
-      data: "#myforma",
-      success: callback
-    });
-});
-
-
-
 $( "#myformb" ).validate({
   rules: {
     first_coefqua: {
@@ -89,5 +77,43 @@ $( "#myformb" ).validate({
     }
   }
 });
+
+$("#myforma").submit(function() {
+    // variable1 = $("id_fieldfirstlin").val()
+    alert($("#fieldfirstlin").val())
+    $.post({
+      url: "/",
+      dataType: 'json',
+      data: {
+        firstlin: $("#fieldfirstlin").val(),
+        secondlin: $("#fieldsecondlin").val(),
+        thirdlin: $("#fieldthirdlin").val(),
+        check: "linear"
+      },
+      success: function(data) { alert(data) }
+    });
+    return false;
+});
+
+$("#myformb").submit(function() {
+    // variable1 = $("id_fieldfirstlin").val()
+    alert($("#fieldfirstlin").val())
+    $.post({
+      url: "/",
+      dataType: 'json',
+      data: {
+        firstqua: $("#fieldfirstqua").val(),
+        secondqua: $("#fieldsecondqua").val(),
+        thirdqua: $("#fieldthirdqua").val(),
+        fourthqua: $("#fieldfourthqua").val(),
+        check: "quadratic"
+      },
+      success: function(data) { alert(data) }
+    });
+    return false;
+});
+
+
+
 
 

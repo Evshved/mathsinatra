@@ -4,12 +4,11 @@ class LinearEquation < MainEquations
     @k = k
     @b = b
     @y = y
-
   end
 
   def solving
     @x = (@y - @b) / @k
-    output = "x = @x.to_s"
+    output = "x = #{@x}"
   end
 
 end
