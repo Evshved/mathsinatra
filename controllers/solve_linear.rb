@@ -9,7 +9,7 @@ class LinearEquation < MainEquations
 
   def solving
     @x = (@y - @b) / @k
-    p @x
+    output = "x = @x.to_s"
   end
 
 end

@@ -27,7 +27,7 @@ post '/' do
       @equation.quadratic(@post[:a].to_f,@post[:b].to_f,@post[:c].to_f,@post[:y].to_f)
       # какойто запрос на страницу
     end
-
+    # EXAMPLE STRING "Answer: #{@output}"
     # get to field answer
   end
 end

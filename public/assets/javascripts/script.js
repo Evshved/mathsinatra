@@ -48,19 +48,19 @@ $( "#myforma" ).validate({
 });
 $( "#myformb" ).validate({
   rules: {
-    first_coeflin: {
+    first_coefqua: {
       required: true,
       digits: true
     },
-    second_coeflin: {
+    second_coefqua: {
       required: true,
       digits: true
     },
-    third_coeflin: {
+    third_coefqua: {
       required: true,
       digits: true
     },
-    fourth_coeflin: {
+    fourth_coefqua: {
       required: true,
       digits: true
     }
