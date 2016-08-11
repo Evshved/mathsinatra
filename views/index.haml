@@ -4,53 +4,53 @@
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
     %title System for solving mathematical equations
     %link{:href => "/assets/stylesheets/style.css", :rel => "stylesheet"}/
-    %script{:src => "/assets/javascripts/jquery-3.1.0.min.js", :type => "text/javascript"}
+    %script{:src => "/assets/javascripts/libs/jquery-3.1.0.min.js", :type => "text/javascript"}
+    %script{:src => "https://cdn.jsdelivr.net/jquery.validation/1.15.0/jquery.validate.min.js"}
+    %script{:src => "https://cdn.jsdelivr.net/jquery.validation/1.15.0/additional-methods.min.js"}
+
     %meta{:charset => "UTF-8"}/
   %body
+
     Hi, it's system for solving mathematical equations
     %br/
     She can solve 2 type of equations.
     %p
       %b Type of mathematical equation
-    %form
-      %input#linear{:name => "switch", :type => "radio", :value => "1"}/
-      Linear
-      %input#quadratic{:name => "switch", :type => "radio", :value => "0"}/
-      Quadratic
-      #div_change_linear
-        %span.letter k∙x + b = y
-        %br/
-        %br/
-        = succeed "x+" do
-          %input#first_coeflin{:maxlength => "25", :name => "post[k]", :size => "10", :type => "text", :value => "6"}/
-        %input#second_coeflin{:maxlength => "25", :name => "post[b]", :size => "10", :type => "text", :value => "2"}/
-        \=
-        %input#third_coeflin{:maxlength => "25", :name => "post[y]", :size => "10", :type => "text", :value => "3"}/
-        %br/
-        #div1
-          %button Answer
-        %output{:name => "result"} 0
+    %input#linear{:name => "switch", :type => "radio", :value => "1"}/
+    Linear
+    %input#quadratic{:name => "switch", :type => "radio", :value => "0"}/
+    Quadratic
+    %form#myforma
+      %span.letter k∙x + b = y
+      %br/
+      %br/
+      = succeed "x+" do
+        %input#field.left{name: "first_coeflin", maxlength: "25", size: 10, value: "2"}/
+      %input#field.left{name: "second_coeflin", maxlength: "25", size: 10, value: "4"}/
+      %input#field3.left{name: "third_coeflin", maxlength: "25", size: 10, value: "3"}/
+      %br/
+      %input{ type: "submit", value: "Answer"}/
 
-      #div_change_quadratic
-        %span.letter
-          ax
-          %sup 2
-          + bx + c = y
-        %br/
-        %br/
-        %input#first_coefqua{:maxlength => "25", :name => "post[a]", :size => "10", :type => "text", :value => "1"}/
-        x
-        %sup> 2
-        +
-        %input#second_coefqua{:maxlength => "25", :name => "post[b]", :size => "10", :type => "text", :value => "2"}/
-        x+
-        %input#third_coefqua{:maxlength => "25", :name => "post[c]", :size => "10", :type => "text", :value => "3"}/
-        \=
-        %input#fourth_coefqua{:maxlength => "25", :name => "post[y]", :size => "10", :type => "text", :value => "4"}/
-        %br/
-        #div2
-          %button Answer
-        %output{:name => "result"} 0
 
-      %input{:type => "hidden", :value => "ch1"}/
-    %script{:src => "/assets/javascripts/script.js"}
+    %form#myformb
+      %span.letter
+        ax
+        %sup 2
+        + bx + c = y
+      %br/
+      %br/
+      %input#field.left{name: "first_coefqua", maxlength: "25", size: 10, value: "2"}/
+      x
+      %sup> 2
+      +
+      %input#field.left{name: "second_coefqua", maxlength: "25", size: 10, value: "2"}/
+      x+
+      %input#field.left{name: "third_coefqua", maxlength: "25", size: 10, value: "2"}/
+      \=
+      %input#field.left{name: "fourth_coefqua", maxlength: "25", size: 10, value: "2"}/
+      %br/
+      %input{ type: "submit", value: "Answer"}/
+
+
+    %input{:type => "hidden", :value => "ch1"}/
+  %script{:src => "/assets/javascripts/script.js"}
