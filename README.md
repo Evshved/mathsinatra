@@ -9,6 +9,4 @@
 ###### rspec spec/tests/
 
 
-######bundle install
-######ruby app.rb
 
