@@ -1,4 +1,4 @@
-require 'spec_helper.rb'
+require 'spec_helper'
 feature "Input " do
   scenario "linear equation: find fields in linear equation" do
     visit '/'
