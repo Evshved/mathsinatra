@@ -10,13 +10,13 @@ class QuadraticEquation < MainEquations
     @c = @c - @y
     @discriminant = @b*@b - 4*@a*@c
     if (@discriminant == 0)
-       puts 'x = '+(-@b/2/@a).to_s
+      output =  'x = '+(-@b/2/@a).to_s
     else
        if (@discriminant > 0)
-        puts 'x1 = '+((-@b-Math.sqrt(@discriminant))/2/@a).to_s
-        puts 'x2 = '+((-@b+Math.sqrt(@discriminant))/2/@a).to_s
+        output = 'x1 = '+((-@b-Math.sqrt(@discriminant))/2/@a).to_s
+        output = "#{output}" + ', x2 = '+((-@b+Math.sqrt(@discriminant))/2/@a).to_s
        else
-        puts "no roots"
+        output = "no roots"
        end
     end
   end

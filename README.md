@@ -37,16 +37,24 @@ Features are welcomed:
 =======
 ### Test task: “System for solving mathematical equations”.
 * full text <a href = "https://gist.github.com/Evshved/15a1e9b0eb30b9f03053e2e9c9525e35" > - click </a>
-<<<<<<< HEAD
+
 ##### For run app
 ###### cd mathsinatra
 ###### bundle install
 ###### ruby app.rb
 ##### For test
 ###### rspec spec/tests/
+<<<<<<< HEAD
 >>>>>>> 5e294eb... Fix bugs. Clean code. Prepare to final.
 =======
 
 ######bundle install
 ######ruby app.rb
 >>>>>>> aadad07... Update Readme.md
+=======
+
+
+######bundle install
+######ruby app.rb
+
+>>>>>>> 29217fc... Add tests. Add output data.
