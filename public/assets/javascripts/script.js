@@ -24,10 +24,20 @@ $('input[type=radio][name=switch]').change(function() {
 //   });
 // });
 
+
+
+
+
 jQuery.validator.setDefaults({
   debug: true,
   success: "valid"
 });
+
+
+
+// let valid = false;
+// valid = validateFunctionToFORM("#myforma");
+
 
 $( "#myforma" ).validate({
   rules: {
@@ -45,7 +55,20 @@ $( "#myforma" ).validate({
     }
 
   }
+})
+
+$("#myforma").submit(function() {
+    alert("1")
+    $.ajax({
+      url: "http://localhost:4567/index.html/",
+      dataType: 'json',
+      data: "#myforma",
+      success: callback
+    });
 });
+
+
+
 $( "#myformb" ).validate({
   rules: {
     first_coefqua: {
