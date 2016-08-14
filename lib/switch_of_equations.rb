@@ -1,15 +1,4 @@
 class MainEquations
-  # def initilize(type)
-  #   @type_of_equation = type
-  # end
-
-  # def switcher
-  #   if @type_of_equation == 1
-  #     linear
-  #   else
-  #     quadratic
-  #   end
-  # end
 
   def linear(k,b,y)
     @linear_output = LinearEquation.new(k,b,y)
