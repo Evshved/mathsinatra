@@ -96,7 +96,6 @@ $("#myforma").submit(function() {
 });
 
 $("#myformb").submit(function() {
-    // variable1 = $("id_fieldfirstlin").val()
     alert($("#fieldfirstlin").val())
     $.post({
       url: "/",
@@ -108,7 +107,7 @@ $("#myformb").submit(function() {
         fourthqua: $("#fieldfourthqua").val(),
         check: "quadratic"
       },
-      success: function(data) { alert(data) }
+      success: function(data) { console.log(data) }
     });
     return false;
 });
