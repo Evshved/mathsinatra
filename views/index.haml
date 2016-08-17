@@ -51,9 +51,12 @@
       = succeed "x+" do
         %input#fieldfirstlin.left{name: "first_coeflin", maxlength: "25", size: 10, value: "2"}/
       %input#fieldsecondlin.left{name: "second_coeflin", maxlength: "25", size: 10, value: "4"}/
-      %input#fieldthirdlin.left{name: "third_coeflin", maxlength: "25", size: 10, value: "3"}/
+      \= 0
       %br/
-      %input{ type: "submit", value: "Answer"}/
+      %br/
+      %button.btn.btn-success{:type => "submit"}
+        Answer
+
 
     %form#myformb
       %span.letter
@@ -69,10 +72,11 @@
       %input#fieldsecondqua.left{name: "second_coefqua", maxlength: "25", size: 10, value: "2"}/
       x+
       %input#fieldthirdqua.left{name: "third_coefqua", maxlength: "25", size: 10, value: "2"}/
-      \=
-      %input#fieldfourthqua.left{name: "fourth_coefqua", maxlength: "25", size: 10, value: "2"}/
+      \= 0
       %br/
-      %input{ type: "submit", value: "Answer"}/
+      %br/
+      %button.btn.btn-success{:type => "submit"}
+        Answer
 
     %input{:type => "hidden", :value => "ch1"}/
   %script{:src => "/assets/javascripts/libs/bootstrap.min.js"}
