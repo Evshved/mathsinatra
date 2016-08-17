@@ -20,12 +20,7 @@ $( "#myforma" ).validate({
     second_coeflin: {
       required: true,
       digits: true
-    },
-    third_coeflin: {
-      required: true,
-      digits: true
     }
-
   }
 })
 
@@ -42,10 +37,6 @@ $( "#myformb" ).validate({
     third_coefqua: {
       required: true,
       digits: true
-    },
-    fourth_coefqua: {
-      required: true,
-      digits: true
     }
   }
 });
@@ -59,7 +50,6 @@ $("#myforma").submit(function() {
       data: {
         firstlin: $("#fieldfirstlin").val(),
         secondlin: $("#fieldsecondlin").val(),
-        thirdlin: $("#fieldthirdlin").val(),
         check: "linear"
       },
       success: function(data) { alert(data) }
@@ -76,7 +66,6 @@ $("#myformb").submit(function() {
         firstqua: $("#fieldfirstqua").val(),
         secondqua: $("#fieldsecondqua").val(),
         thirdqua: $("#fieldthirdqua").val(),
-        fourthqua: $("#fieldfourthqua").val(),
         check: "quadratic"
       },
       success: function(data) { console.log(data) }
