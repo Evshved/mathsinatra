@@ -1,8 +1,3 @@
-# # Test linear
-# equation = Equation.new
-# equation.linear(0,1) => []
-# equation.linear(1,1) => [-1]
-
 require_relative '../spec_helper'
 
 RSpec.describe LinearEquation  do
