@@ -6,11 +6,14 @@ class QuadraticEquation < Equation
   end
 
   def roots
-    return [] if discriminant < 0
-    return [-@b / (2 * @a)] if discriminant == 0
-
-    sqrt = Math.sqrt(discriminant)
-    [-@b + sqrt, -@b - sqrt].map { |item| item / (2 * @a) }
+    return 'Answer: no roots' if discriminant < 0
+    if discriminant == 0
+    @answer = [-@b / (2 * @a)]
+    return "Answer: #{@answer}"
+    end
+    @sqrt = Math.sqrt(discriminant)
+    @answer = [-@b + @sqrt, -@b - @sqrt].map { |item| item / (2 * @a) }
+    "Answer: #{@answer}"
   end
 
   private
