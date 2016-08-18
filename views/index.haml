@@ -21,33 +21,25 @@
             %span.sr-only Toggle navigation
             %span.icon-bar
             %span.icon-bar
-            %span.icon-bar
-          %a.navbar-brand{:href => "#"} Math on Sinatra
+          %a.navbar-brand Math on Sinatra
         #navbar.collapse.navbar-collapse
           %ul.nav.navbar-nav
             %li.active
-              %a{:href => "#"} Home
+              %a{:href => "/"} Home
             %li
-              %a{:href => "#about"} About
-            %li
-              %a{:href => "#contact"} Contact
-    %br/
-    %br/
-    %br/
-    %br/
-    Hi, it's system for solving mathematical equations
-    %br/
-    She can solve 2 type of equations.
-    %p
-      %b Type of mathematical equation
-    %input#linear{:name => "switch", :type => "radio", :value => "1"}/
-    Linear
-    %input#quadratic{:name => "switch", :type => "radio", :value => "0"}/
-    Quadratic
-    %form#myforma
-      %span.letter k∙x + b = y
-      %br/
-      %br/
+              %a{:href => "contact"} Contact
+    %form#myform{:style => "margin-left: 50px; margin-top: 80px;"}
+      %h3 Hi, it's system for solving mathematical equations.
+      %h4 She can solve 2 type of equations.
+      %p
+        %b Choose type of mathematical equation
+      %input#linear{:name => "switch", :type => "radio", :value => "1"}/
+      Linear
+      %input#quadratic{:name => "switch", :type => "radio", :value => "0"}/
+      Quadratic
+    %form#myforma{:style => "margin-left: 50px;"}
+      %h4
+        %span.letter k∙x + b = y
       = succeed "x+" do
         %input#fieldfirstlin.left{name: "first_coeflin", maxlength: "25", size: 10, value: "2"}/
       %input#fieldsecondlin.left{name: "second_coeflin", maxlength: "25", size: 10, value: "4"}/
@@ -56,15 +48,17 @@
       %br/
       %button.btn.btn-success{:type => "submit"}
         Answer
-
-
-    %form#myformb
-      %span.letter
-        ax
-        %sup 2
-        + bx + c = y
       %br/
       %br/
+      %input#fieldanswerqua.left{name: "answer_for_lin", maxlength: "25", size: 25, value: ""}/
+
+
+    %form#myformb{:style => "margin-left: 50px;"}
+      %h4
+        %span.letter
+          ax
+          %sup 2
+          + bx + c = y
       %input#fieldfirstqua.left{name: "first_coefqua", maxlength: "25", size: 10, value: "2"}/
       x
       %sup> 2
@@ -77,6 +71,9 @@
       %br/
       %button.btn.btn-success{:type => "submit"}
         Answer
+      %br/
+      %br/
+      %input#fieldanswerqua.left{name: "answer_for_qua", maxlength: "25", size: 25, value: ""}/
 
     %input{:type => "hidden", :value => "ch1"}/
   %script{:src => "/assets/javascripts/libs/bootstrap.min.js"}
