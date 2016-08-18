@@ -1,11 +1,10 @@
 body {
-  font-family: Arial, sans-serif; /* Рубленый шрифт */
+  font-family: Arial, sans-serif;
 }
 .letter {
-  color: red; /* Красный цвет символов */
-  font-size: 100%; /* Размер шрифта в процентах */
-  font-family: serif; /* Шрифт с засечками */
-  position: relative; /* Относительное позиционирование */
-  top: 10px; /* Сдвиг сверху */
+  color: red;
+  font-size: 100%;
+  font-family: serif;
+  top: 10px;
 }
 
