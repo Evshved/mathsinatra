@@ -8,7 +8,7 @@ RSpec.describe QuadraticEquation do
       let(:a) { 1 }
       let(:b) { 1 }
       let(:c) { 0 }
-      specify { expect(subject.roots).to eq([0.0, -1.0]) }
+      specify { expect(subject.roots).to eq('Answer: [0.0, -1.0]') }
     end
 
     context 'discriminant = 0' do
@@ -16,14 +16,14 @@ RSpec.describe QuadraticEquation do
       let(:b) { 2 }
       let(:c) { 1 }
 
-      specify { expect(subject.roots).to eq([-1]) }
+      specify { expect(subject.roots).to eq('Answer: [-1]') }
     end
 
     context 'discriminant < 0' do
       let(:a) { 100 }
       let(:b) { 1 }
       let(:c) { 2 }
-      specify { expect(subject.roots).to be_empty }
+      specify { expect(subject.roots).to eq('Answer: no roots') }
     end
   end
 end
