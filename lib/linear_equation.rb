@@ -5,7 +5,8 @@ class LinearEquation < Equation
   end
 
   def roots
-    return [] if @k == 0
-    -@b / @k
+    return 'Answer: no roots' if @k == 0
+    @answer = -@b / @k
+    "Answer: #{@answer}"
   end
 end
