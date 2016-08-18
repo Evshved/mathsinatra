@@ -38,6 +38,7 @@ Features are welcomed:
 ### Test task: “System for solving mathematical equations”.
 * full text <a href = "https://gist.github.com/Evshved/15a1e9b0eb30b9f03053e2e9c9525e35" > - click </a>
 
+<<<<<<< HEAD
 ##### For run app
 ###### cd mathsinatra
 ###### bundle install
@@ -58,3 +59,19 @@ Features are welcomed:
 ######ruby app.rb
 
 >>>>>>> 29217fc... Add tests. Add output data.
+=======
+
+##### Run app
+* cd mathsinatra
+* bundle install
+* bundle exec ruby app.rb
+* link on localhost <a href = "http://localhost:4567/" > - click </a>
+
+##### Run tests
+* cd mathsinatra
+* bundle install
+* bundle exec rspec spec/
+
+##### Versions
+* Ruby version - ruby 2.2.2p95
+>>>>>>> 26f3d71... Update Readme.md
