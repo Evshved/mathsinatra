@@ -7,16 +7,14 @@ require './lib/equation'
 require './lib/linear_equation'
 require './lib/quadratic_equation'
 
-
 set :public_folder, 'public'
 
 get '/' do
   haml :index
 end
 
-
-get '/index.html/' do
-  haml :index
+get '/contact' do
+  haml :contact
 end
 
 post '/' do
@@ -26,19 +24,16 @@ post '/' do
   p @status
 
   if @status == "linear"
-    @equation = MainEquations.new
-    @data = @equation.linear(params[:firstlin].to_f,params[:secondlin].to_f,params[:thirdlin].to_f)
+    @equation = Equation.new
+    @data = @equation.linear(params[:firstlin].to_f,params[:secondlin].to_f)
   end
 
   if @status == "quadratic"
-    @equation = MainEquations.new
+    @equation = Equation.new
     @data = @equation.quadratic(
       params[:firstqua].to_f,params[:secondqua].to_f,
-      params[:thirdqua].to_f, params[:fourthqua].to_f
+      params[:thirdqua].to_f
     )
   end
-    # EXAMPLE STRING "Answer: #{@output}"
-  json result: @data
+  json result: @data.to_s
 end
-
-
