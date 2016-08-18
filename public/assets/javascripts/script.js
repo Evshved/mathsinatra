@@ -7,6 +7,7 @@ $('input[type=radio][name=switch]').change(function() {
     .change();
 
 
+
 jQuery.validator.setDefaults({
   debug: true,
   success: "valid"
@@ -42,8 +43,6 @@ $( "#myformb" ).validate({
 });
 
 $("#myforma").submit(function() {
-    // variable1 = $("id_fieldfirstlin").val()
-    alert($("#fieldfirstlin").val())
     $.post({
       url: "/",
       dataType: 'json',
@@ -52,13 +51,12 @@ $("#myforma").submit(function() {
         secondlin: $("#fieldsecondlin").val(),
         check: "linear"
       },
-      success: function(data) { alert(data) }
+      success: function(data) { showAnswerForLinear(data) }
     });
     return false;
 });
 
 $("#myformb").submit(function() {
-    alert($("#fieldfirstlin").val())
     $.post({
       url: "/",
       dataType: 'json',
@@ -68,12 +66,35 @@ $("#myformb").submit(function() {
         thirdqua: $("#fieldthirdqua").val(),
         check: "quadratic"
       },
-      success: function(data) { console.log(data) }
+      success: function(data) { showAnswerForQuadratic(data) }
     });
     return false;
+
+
 });
 
 
+function showAnswerForQuadratic(answer) {
+    var json={
+      "answer_for_qua" : answer['result']
+    };
+    console.log(answer)
+    for(key in json)
+    {
+      if(json.hasOwnProperty(key))
+        $('input[name='+key+']').val(json[key]);
+    }
+}
 
-
+function showAnswerForLinear(answer) {
+    var json={
+      "answer_for_lin" : answer['result']
+    };
+    console.log(answer)
+    for(key in json)
+    {
+      if(json.hasOwnProperty(key))
+        $('input[name='+key+']').val(json[key]);
+    }
+}
 
