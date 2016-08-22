@@ -1,18 +1,24 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 Test task: “System for solving mathematical equations”.
+=======
+### Test task: “System for solving mathematical equations”.
+* full text <a href = "https://gist.github.com/Evshved/15a1e9b0eb30b9f03053e2e9c9525e35" > - click </a>
+>>>>>>> f5bd04f43abf4aeeb9132c7eb58a26fc3faaf591
 
-The system should contain 2 main components:
-  1 Frontend server.
-  2   Backend server
 
-  1 Frontend server requirements
+##### Run app
+* cd mathsinatra
+* bundle install
+* bundle exec ruby app.rb
+* link on localhost <a href = "http://localhost:4567/" > - click </a>
 
-RoR application must provide:
-  a) Selection of the type of equation (the default are linear and quadratic)
-  b) The form for inputting the parameters of the solution
-  c) Sending the parameters of the equation to the backend server using JSON
-  d) Displaying the result in the "friendly" format.
+##### Run tests
+* cd mathsinatra
+* bundle install
+* bundle exec rspec spec/
 
+<<<<<<< HEAD
 Features are welcomed:
   a) Use CSS for web page design (input form, result page, progress bar/spinner)
   b) Use JS / Ajax in forms, selection page, input, output, and validation
@@ -75,3 +81,7 @@ Features are welcomed:
 ##### Versions
 * Ruby version - ruby 2.2.2p95
 >>>>>>> 26f3d71... Update Readme.md
+=======
+##### Versions
+* Ruby version - ruby 2.2.2p95
+>>>>>>> f5bd04f43abf4aeeb9132c7eb58a26fc3faaf591
