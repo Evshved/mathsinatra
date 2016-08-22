@@ -19,10 +19,11 @@ end
 
 post '/' do
   puts params
-  (params[:firstlin].to_f + params[:secondlin].to_f + params[:thirdlin].to_f).to_s
+  # (params[:firstlin].to_f + params[:secondlin].to_f + params[:thirdlin].to_f).to_s
   @status = (params[:check]).to_s
   p @status
 
+  # логика должна быть в одном месте
   if @status == "linear"
     @equation = Equation.new
     @data = @equation.linear(params[:firstlin].to_f,params[:secondlin].to_f)
@@ -37,3 +38,4 @@ post '/' do
   end
   json result: @data.to_s
 end
+# убрать bootstrap и rspec min и min

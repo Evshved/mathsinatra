@@ -9,3 +9,4 @@ class Equation
     p @quadratic_output.roots
   end
 end
+# process один метод
